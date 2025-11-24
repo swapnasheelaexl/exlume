@@ -1,0 +1,32 @@
+/* ===== Design Tokens ===== */
+:root {
+  /* Brand / Primary */
+  --color-primary: #fc4d04; /* Vibrant Orange-Red */
+
+  /* Dark / Background */
+  --color-bg-1: #1b1b1b; /* app background */
+  --color-bg-2: #2c2c2c; /* cards/panels */
+  --color-bg-3: #3a3a3a; /* hover/active */
+
+  /* Light / Neutral */
+  --color-light-1: #f5f5f5;
+  --color-light-2: #e0e0e0;
+  --color-white:   #ffffff;
+
+  /* Accents */
+  --color-blue:   #0077b6;
+  --color-teal:   #00b4d8; /* info/success accent */
+  --color-yellow: #ffd60a; /* warning */
+  --color-green:  #00c853; /* success */
+
+  /* Gradients */
+  --grad-primary: linear-gradient(90deg, #fc4d04 0%, #ff7849 100%);
+  --grad-bg:      linear-gradient(180deg, #1b1b1b 0%, #2c2c2c 100%);
+  --grad-kpi:     linear-gradient(90deg, #fc4d04 0%, #ffd60a 100%);
+}
+
+/* Material base tokens (no theme import) */
+html, body {
+  background: var(--color-bg-1);
+  color: var(--color-light-1);
+}

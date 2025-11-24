@@ -1,0 +1,37 @@
+/* Base radius/shadows */
+:root {
+  --p-border-radius: 12px;
+  --p-focus-ring: 0 0 0 3px rgba(252, 77, 4, 0.35);
+
+  /* Brand */
+  --p-primary-color: #fc4d04;
+  --p-primary-contrast-color: #ffffff;
+
+  /* Surfaces */
+  --p-content-background: #1b1b1b;
+  --p-surface-100: #2c2c2c;
+  --p-surface-200: #3a3a3a;
+  --p-content-color: #f5f5f5;
+  --p-text-muted-color: #e0e0e0;
+
+  /* Accents */
+  --p-info-color: #00b4d8;
+  --p-info-contrast-color: #0b0e10;
+  --p-success-color: #00c853;
+  --p-warning-color: #ffd60a;
+  --p-help-color: #0077b6;
+}
+
+/* Buttons */
+.p-button {
+  background: var(--color-primary);
+  border: none;
+  &:hover { filter: brightness(1.1); }
+}
+
+/* Cards / panels */
+.p-card, .p-panel {
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-bg-3);
+  color: var(--color-light-1);
+}
