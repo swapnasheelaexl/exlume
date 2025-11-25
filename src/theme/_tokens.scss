@@ -4,7 +4,8 @@
   --color-primary: #fc4d04; /* Vibrant Orange-Red */
 
   /* Dark / Background */
-  --color-bg-1: #1b1b1b; /* app background */
+  --color-bg-1: #F1F5F9; /* app background */
+  --color-tx-1: #1E293B; /* app background */
   --color-bg-2: #2c2c2c; /* cards/panels */
   --color-bg-3: #3a3a3a; /* hover/active */
 
@@ -28,5 +29,37 @@
 /* Material base tokens (no theme import) */
 html, body {
   background: var(--color-bg-1);
-  color: var(--color-light-1);
+  color: var(--color-tx-1);
+  font-family: 'Roboto Regular';
 }
+
+.main-bg-color {
+  background-color: var(--color-bg-1);
+}
+.border-right {
+    border-right: 1px solid #E2E8F0 !important;
+}
+.w-auto {
+    width: auto !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+.gap-9 {
+    gap: 6rem !important;
+}
+
+.gap-10 {
+    gap: 7rem !important;
+}
+
+
+// .p-button:not(:disabled):hover {
+//   background-color: #fc4d04 !important; /* your desired color */
+//   border-color: #fc4d04 !important;     /* optional */
+//   color: white;              /* optional */
+//   opacity: 0.3;            /* optional */
+//   transition: background-color 0.3s, border-color 0.3s; /* smooth hover effect */
+// }
+

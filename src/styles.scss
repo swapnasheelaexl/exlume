@@ -88,11 +88,13 @@
 /* styles.scss */
 
 /* ✅ All @use statements must come first */
-@use "theme/global-font";
-@use "theme/tokens";
-@use "theme/primeng-overrides";
+@use "theme/_global-font";
+@use "theme/_tokens";
+@use "theme/_primeng-overrides";
 @use '@angular/material' as mat;
 @use 'sass:map';
+
+@import "primeicons/primeicons.css";
 
 /* ✅ Then you can define your theme */
 $my-theme: mat.define-theme((

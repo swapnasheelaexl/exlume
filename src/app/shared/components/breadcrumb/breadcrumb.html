@@ -1,0 +1,35 @@
+
+
+
+<nav *ngIf="breadcrumbs.length" class="breadcrumb p-2 text-sm text-gray-600">
+  <div class="flex justify-content-start flex-nowrap">
+    <ng-container *ngFor="let crumb of breadcrumbs; let first = first; let last = last">
+
+      <!-- First breadcrumb (Home) with icon, clickable if not current page -->
+      <a *ngIf="first && !last" [routerLink]="crumb.url" class="home-icon flex justify-content-center px-1">
+        <i class="pi pi-home p-2"></i>
+        <span>{{ crumb.label }}</span>
+      </a>
+
+      <!-- First breadcrumb (Home) but current page -->
+      <span *ngIf="first && last" class="home-icon active-page flex justify-content-center px-1">
+        <i class="pi pi-home p-2"></i>
+        <span>{{ crumb.label }}</span>
+      </span>
+
+      <!-- Other breadcrumbs, clickable if not last -->
+      <a *ngIf="!first && !last" [routerLink]="crumb.url" class="breadcrumb-link px-1">
+        {{ crumb.label }}
+      </a>
+
+      <!-- Current (active) breadcrumb, gray and not clickable -->
+      <span *ngIf="!first && last" class="breadcrumb-link active-page px-1">
+        {{ crumb.label }}
+      </span>
+
+      <!-- Separator -->
+      <span *ngIf="!last" class="py-2 px-1"> &gt; </span>
+
+    </ng-container>
+  </div>
+</nav>

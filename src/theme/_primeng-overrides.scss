@@ -20,6 +20,9 @@
   --p-success-color: #00c853;
   --p-warning-color: #ffd60a;
   --p-help-color: #0077b6;
+
+
+  --p-button-primary-focus-ring-color: #fc4d04;
 }
 
 /* Buttons */
@@ -35,3 +38,84 @@
   border: 1px solid var(--color-bg-3);
   color: var(--color-light-1);
 }
+
+
+.p-button {
+  background: var(--p-primary-color);
+  color: var(--p-primary-contrast-color);
+  border: none;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+.p-card, .p-panel {
+  background: var(--p-surface-100);
+  border: 1px solid var(--p-surface-200);
+  color: var(--p-content-color);
+}
+
+
+
+
+
+/* ---------------------- Primary buttons ---------------------- */
+.p-button:not(:disabled):hover {
+  background-color: #fc4d04 !important; /* desired hover color */
+  border-color: #fc4d04 !important;
+  color: white !important;
+  opacity: 1;
+  filter: brightness(1.1);
+  transition: background-color 0.3s, border-color 0.3s, filter 0.3s;
+}
+
+.p-button:not(:disabled):active {
+  background-color: #fc4d04 !important; /* keep same as hover or use different shade */
+  border-color: #fc4d04 !important;
+  color: white !important;
+}
+
+/* ---------------------- Text buttons ---------------------- */
+.p-button-text {
+  background: transparent;
+  border-color: transparent;
+  color: var(--p-button-text-primary-color);
+}
+
+.p-button-text:not(:disabled):hover {
+  background-color: #fc4d04 !important;
+  border-color: transparent;
+  color: white !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.p-button-text:not(:disabled):active {
+  background-color: #fc4d04 !important;
+  border-color: transparent;
+  color: white !important;
+}
+
+/* ---------------------- Icon-only rounded buttons ---------------------- */
+.p-button-icon-only.p-button-rounded {
+  border-radius: 50%;
+  height: var(--p-button-icon-only-width);
+}
+
+/* ---------------------- Focus states ---------------------- */
+
+.p-button:focus-visible {
+
+    outline: var(--p-button-primary-focus-ring-color)!important;
+
+}
+
+/* ---------------------- Rounded buttons ---------------------- */
+.p-button-rounded {
+  border-radius: var(--p-button-rounded-border-radius);
+}
+

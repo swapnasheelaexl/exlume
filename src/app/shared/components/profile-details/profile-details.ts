@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CheckboxModule } from 'primeng/checkbox';
@@ -9,7 +10,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 
 @Component({
-  selector: 'app-topbar',
+  selector: 'app-profile-details',
   standalone: true,
   imports: [
     CommonModule,
@@ -20,12 +21,11 @@ import { PasswordModule } from 'primeng/password';
     CheckboxModule,
     IconFieldModule,
     CardModule,
+    RouterModule,
   ],
-  templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.scss'],
+  templateUrl: './profile-details.html',
+  styleUrl: './profile-details.scss',
 })
-export class TopbarComponent implements OnInit {
-  constructor() {}
+export class ProfileDetails {
 
-  ngOnInit() {}
 }

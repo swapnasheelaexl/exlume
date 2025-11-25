@@ -1,0 +1,35 @@
+@import '../../../../theme/mixins';
+
+.header {
+    @include linear-gradient-theme(135deg);
+    .leftSectionHeader {
+      .leftSideLogo {
+        width: 208px;
+        .logo {
+          height: 32px;
+        }
+      }
+      .toggleArrowSideMenu {
+        span {
+          width: 40px !important;
+          height: 40px !important;
+          border-radius: 18px;
+          background-color: #fb4e0b;
+        }
+      }
+      .page-title {
+        padding-left: 1rem;
+        font-family: 'Roboto Bold';
+        font-size: 22px;
+      }
+    }
+
+    .rightSectionHeader {
+      .avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+        background-color: #fb4e0b;
+      }
+    }
+  }
