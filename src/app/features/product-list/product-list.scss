@@ -1,0 +1,146 @@
+// .productListSection {
+//   .titleProductList {
+//     width: 100%;
+//     height: 48px;
+//     font-family: 'Roboto SemiBold';
+//     font-size: 18px;
+//     color: #1e293b;
+//     background-color: #ffffff;
+//     .productListRow {
+//       width: 212px;
+//       height: 205px;
+//       .cardProductList {
+//         width: 212px;
+//         border-radius: 8px;
+
+//         .card-body {
+//           padding: 0.5rem 0.5rem 1rem 0.5rem;
+//           .card-image-container {
+//             width: 212px;
+//             max-width: 212px;
+//             min-height: 205px;
+//             object-fit: cover;
+//             border-radius: 8px;
+//           }
+//           .card-title-container {
+//             font-size: 1rem;
+//             font-weight: 600;
+//             .card-text {
+//               font-size: 0.875rem;
+//               color: #666666;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.productListContainer {
+  width: 100%;
+  height: 100%;
+
+  .productListSection {
+    .titleProductList {
+      width: 100%;
+      height: 48px;
+      font-family: 'Roboto SemiBold';
+      font-size: 18px;
+      color: #1e293b;
+      background: #ffffff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    .productListRow {
+      margin: 10px 8px 25px 8px;
+      /* ---- FIXED CARD SIZE ---- */
+      .cardProductList {
+        width: 275px;
+        height: 210px;
+        padding: 0 !important;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        color: #000;
+
+        .card-body {
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+          .productDetails {
+            width: 275px; // card width
+            position: relative; // needed for absolute positioning of title
+            margin: 0 auto; // center the card horizontally
+
+            .card-image-container {
+              width: 100%;
+              height: 200px; // adjust as needed
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              }
+            }
+
+            .card-title-container {
+              position: absolute; // overlay on image
+              bottom: -10px; // stick to bottom
+              left: 0;
+              width: 100%;
+              height: 70px;
+              background-color: rgba(0, 80, 113, 0.8); // semi-transparent
+              border-radius: 0 0 8px 8px;
+              text-align: center;
+              padding: 25px 0;
+
+              .productName {
+                font-family: 'Roboto Bold';
+                font-size: 18px;
+                color: #ffffff;
+                margin: 0; // remove extra margin
+              }
+            }
+          }
+
+          // .productDetails {
+          //   .card-image-container {
+          //     width: 100%;
+          //     height: 100%;
+          //     img {
+          //       width: 100%;
+          //       height: 100%;
+          //       object-fit: cover;
+
+          //     }
+          //   }
+          //   .card-title-container {
+          //     background-color: #005071;
+          //     opacity: 0.8;
+          //     height: 70px; // remaining space
+          //     width: 275px;
+          //     text-align: center;
+          //     // margin: -51px 0;
+          //     border-radius: 0 0 8px 8px;
+          //     .productName {
+          //       font-family: 'Roboto Bold';
+          //       font-size: 18px;
+          //       color: #ffffff;
+          //       margin: 25px auto;
+          //     }
+          //   }
+          // }
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .p-card .p-card-body {
+  padding: 0 !important;
+}

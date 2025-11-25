@@ -30,3 +30,22 @@ html, body {
   background: var(--color-bg-1);
   color: var(--color-light-1);
 }
+
+
+.gap-9 {
+    gap: 6rem !important;
+}
+
+.gap-10 {
+    gap: 7rem !important;
+}
+
+
+// .p-button:not(:disabled):hover {
+//   background-color: #fc4d04 !important; /* your desired color */
+//   border-color: #fc4d04 !important;     /* optional */
+//   color: white;              /* optional */
+//   opacity: 0.3;            /* optional */
+//   transition: background-color 0.3s, border-color 0.3s; /* smooth hover effect */
+// }
+

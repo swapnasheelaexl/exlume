@@ -1,0 +1,10 @@
+
+// colors
+$light: #F9F8F8;
+$dark:  #005071;
+
+// simple gradient mixin
+@mixin linear-gradient-theme($angle: 90deg, $from: $light, $to: $dark) {
+  background-color: $from;
+  background-image: linear-gradient($angle, $from 0%, $to 18%);
+}

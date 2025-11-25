@@ -1,0 +1,66 @@
+<div class="productListContainer px-4 py-4">
+  <!-- Products Section -->
+  <div class="productListSection">
+    <div class="titleProductList flex align-items-center justify-content-between px-3">
+      Products
+    </div>
+
+    <div class="productListRow flex md:justify-content-start justify-content-center flex-wrap gap-3 mx-2">
+      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let item of products" (click)="selectProduct(item.id)">
+        <div class="card-body p-0">
+           <div class="productDetails flex md:justify-content-start justify-content-center flex-wrap">
+            <div class="card-image-container">
+              <img class="col-12" [src]="item.image" alt="{{ item.title }}" />
+            </div>
+            <div class="card-title-container">
+              <div class="productName">{{ item.title }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Data Section-->
+  <div class="productListSection">
+    <div class="titleProductList flex align-items-center justify-content-between px-3">
+      Data
+    </div>
+
+    <div class="productListRow flex md:justify-content-start justify-content-center flex-wrap gap-3 mx-2">
+      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let itemD of data">
+        <div class="card-body p-0">
+          <div class="productDetails flex md:justify-content-start justify-content-center flex-wrap">
+            <div class="card-image-container">
+              <img class="col-12" [src]="itemD.image" alt="{{ itemD.title }}" />
+            </div>
+            <div class="card-title-container">
+              <div class="productName">{{ itemD.title }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Assumption Section -->
+ <div class="productListSection">
+    <div class="titleProductList flex align-items-center justify-content-between px-3">
+      Assumption
+    </div>
+
+    <div class="productListRow flex md:justify-content-start justify-content-center flex-wrap gap-3 mx-2">
+      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let itemA of assumption">
+        <div class="card-body p-0">
+            <div class="productDetails flex md:justify-content-start justify-content-center flex-wrap">
+            <div class="card-image-container">
+              <img class="col-12" [src]="itemA.image" alt="{{ itemA.title }}" />
+            </div>
+            <div class="card-title-container">
+              <div class="productName">{{ itemA.title }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
