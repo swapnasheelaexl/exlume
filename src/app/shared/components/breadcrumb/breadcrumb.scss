@@ -1,4 +1,35 @@
- .breadcrumb {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
+.breadcrumb {
+  font-family: 'Roboto Italic';
+  font-size: 14px;
+  color: #6b7280;
+
+  padding: 0.60rem !important;
+
+  .home-icon,
+  .breadcrumb-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #fb4e0b;
+    }
+
+    i {
+      font-size: 16px;
+    }
   }
+
+  .active-page {
+    cursor: default;
+    color: #9ca3af; // Gray for current page
+    pointer-events: none;
+
+    &:hover {
+      color: #9ca3af; // Disable hover
+    }
+  }
+}

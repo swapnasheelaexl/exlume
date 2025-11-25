@@ -94,6 +94,8 @@
 @use '@angular/material' as mat;
 @use 'sass:map';
 
+@import "primeicons/primeicons.css";
+
 /* ✅ Then you can define your theme */
 $my-theme: mat.define-theme((
   color: (

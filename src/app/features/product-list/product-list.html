@@ -6,7 +6,8 @@
     </div>
 
     <div class="productListRow flex md:justify-content-start justify-content-center flex-wrap gap-3 mx-2">
-      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let item of products" (click)="selectProduct(item.id)">
+      <!-- <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let item of products" (click)="selectProduct(item)"> -->
+      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let item of products" (click)="goToProduct(item)">
         <div class="card-body p-0">
            <div class="productDetails flex md:justify-content-start justify-content-center flex-wrap">
             <div class="card-image-container">
@@ -27,7 +28,7 @@
     </div>
 
     <div class="productListRow flex md:justify-content-start justify-content-center flex-wrap gap-3 mx-2">
-      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let itemD of data">
+      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let itemD of data" (click)="goToProduct(itemD)">
         <div class="card-body p-0">
           <div class="productDetails flex md:justify-content-start justify-content-center flex-wrap">
             <div class="card-image-container">
@@ -49,7 +50,7 @@
     </div>
 
     <div class="productListRow flex md:justify-content-start justify-content-center flex-wrap gap-3 mx-2">
-      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let itemA of assumption">
+      <div class="flex align-items-center cardProductList justify-content-center m-2" *ngFor="let itemA of assumption" (click)="goToProduct(itemA)">
         <div class="card-body p-0">
             <div class="productDetails flex md:justify-content-start justify-content-center flex-wrap">
             <div class="card-image-container">

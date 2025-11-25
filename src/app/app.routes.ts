@@ -7,7 +7,7 @@ export const routes: Routes = [
     path: 'login',
     loadComponent: () => import('./features/login/login.component').then((m) => m.LoginComponent),
   },
- {
+  {
     path: 'dashboard',
     canActivate: [canActivate],
     loadComponent: () =>
@@ -19,13 +19,21 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/product-list/product-list').then((m) => m.ProductList),
       },
+      // {
+      //   path: ':id',
+      //   loadComponent: () =>
+      //     import('./features/product-list/universal-life/universal-life').then(
+      //       (m) => m.UniversalLifeComponent
+      //     ),
+      // },
       {
-        path: 'product/:id',
+        path: ':id',
+        canActivate: [canActivate],
         loadComponent: () =>
-          import('./features/product-list/universal-life/universal-life').then(
-            (m) => m.UniversalLifeComponent
+          import('./features/product-list/dynamic-product-loader/dynamic-product-loader').then(
+            (m) => m.DynamicProductLoader
           ),
-      },
+      }
     ],
   },
   {

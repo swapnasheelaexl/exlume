@@ -12,6 +12,7 @@ interface DashboardItem {
   id: number;
   title: string;
   image: string;
+  name: string;
 }
 @Component({
   selector: 'app-product-list',
@@ -32,33 +33,37 @@ interface DashboardItem {
 export class ProductList {
   @Output() productSelected = new EventEmitter<number>();
   products: DashboardItem[] = [
-    { id: 1, title: 'Universal Life', image: 'assets/img/product list/product (8).png' },
-    { id: 2, title: 'Term', image: 'assets/img/product list/product (7).png' },
-    { id: 3, title: 'Variable Universal Life', image: 'assets/img/product list/product (6).png' },
-    { id: 4, title: 'Deferred Annuities', image: 'assets/img/product list/product (5).png' },
-    { id: 5, title: 'Immediate Annuities', image: 'assets/img/product list/product (4).png' },
-    { id: 6, title: 'Whole Life', image: 'assets/img/product list/product (3).png' },
+    { id: 1, name :"universal_life" ,title: 'Universal Life', image: 'assets/img/product list/product (8).png' },
+    { id: 2,name :"term" , title: 'Term', image: 'assets/img/product list/product (7).png' },
+    { id: 3,name :"variable_universal_life" , title: 'Variable Universal Life', image: 'assets/img/product list/product (6).png' },
+    { id: 4,name :"deferred_annuities" , title: 'Deferred Annuities', image: 'assets/img/product list/product (5).png' },
+    { id: 5,name :"immediate_annuities" , title: 'Immediate Annuities', image: 'assets/img/product list/product (4).png' },
+    { id: 6,name :"whole_life" , title: 'Whole Life', image: 'assets/img/product list/product (3).png' },
   ];
 
   data: DashboardItem[] = [
-    { id: 7, title: 'Master Data Library', image: 'assets/img/product list/product (2).png' },
+    { id: 7,name :"master_data_library" , title: 'Master Data Library', image: 'assets/img/product list/product (2).png' },
   ];
 
   assumption: DashboardItem[] = [
-    { id: 8, title: 'Master Assumption Library', image: 'assets/img/product list/product (1).png' },
+    { id: 8,name :"master_assumption_library" , title: 'Master Assumption Library', image: 'assets/img/product list/product (1).png' },
   ];
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
-  // goToProduct(productId: number) {
-  //   this.router.navigate(['/product', productId]);
+  // selectProduct(ProductObject: DashboardItem) {
+  //   console.log('Selected Product:', ProductObject);
+  //   const formattedProductName = ProductObject.title.toLowerCase().replace(/ /g, '_');
+  //   this.router.navigate([`/dashboard/${formattedProductName}`], { relativeTo: this.route });
   // }
 
-  // selectProduct(productId: number) {
-  //   this.productSelected.emit(productId);
-  // }
-
-  selectProduct(productId: number) {
-    this.router.navigate(['product', productId], { relativeTo: this.route });
-  }
+  goToProduct(product: any) {
+  this.router.navigate(['/dashboard', product.name]).then(success => {
+    if (success) {
+      console.log('Navigation successful');
+    } else {
+      console.error('Navigation failed');
+    }
+  });
+}
 }

@@ -1,31 +1,28 @@
-<!-- <p-card header="Dashboard Overview" styleClass="mb-3"> -->
-<!-- <highcharts-chart
-    [highcharts]="Highcharts"
-    [options]="chartOptions"
-    style="width:100%; height:400px; display:block;">
-  </highcharts-chart> -->
-<!-- </p-card> -->
-
-<!-- <p-card header="Status Grid">
-  <ag-grid-angular
-    class="ag-theme-alpine-dark"
-    style="width:100%; height:300px;"
-    [columnDefs]="colDefs"
-    [rowData]="rowData">
-  </ag-grid-angular>
-</p-card> -->
-
-
 <div class="dashboard-container">
   <!-- Top Bar -->
   <app-topbar></app-topbar>
 
   <!-- Breadcrumb -->
-  <app-breadcrumb></app-breadcrumb>
+  <div class="flex align-content-center flex-wrap bg-white border-b border-gray-300">
+    <div class="flex-none flex align-items-center justify-content-center border-right">
+      <app-profile-details></app-profile-details>
 
-  <!-- Sections -->
-  <!-- <app-product-list (productSelected)="onProductSelected($event)"></app-product-list> -->
-  <div class="dashboard-content">
-    <router-outlet></router-outlet>
+    </div>
+    <div class="flex-grow-1 flex align-items-start justify-content-start w-auto">
+      <app-breadcrumb></app-breadcrumb>
+    </div>
   </div>
+  <!-- <div class="flex overflow-hidden bg-white border-b border-gray-300 custome-height "> -->
+    <!-- <div class="flex-grow-1 flex-shrink-1 flex align-items-center justify-content-center border-right">
+      <app-sidemenu></app-sidemenu>
+    </div> -->
+    <!-- <div class="flex-shrink-0 flex align-items-center justify-content-center w-auto  main-bg-color"> -->
+      <!-- Sections -->
+      <div class="dashboard-content main-bg-color">
+        <router-outlet></router-outlet>
+      </div>
+    <!-- </div> -->
+  <!-- </div> -->
+
+
 </div>

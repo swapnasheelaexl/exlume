@@ -1,3 +1,5 @@
+import { Sidemenu } from './../../shared/components/sidemenu/sidemenu';
+import { ProfileDetails } from './../../shared/components/profile-details/profile-details';
 import {  BreadcrumbComponent } from './../../shared/components/breadcrumb/breadcrumb';
 import { TopbarComponent } from './../../shared/components/topbar/topbar.component';
 import * as Highcharts from 'highcharts';
@@ -23,7 +25,7 @@ import { Router, RouterOutlet } from '@angular/router';
   standalone: true,
   selector: 'app-dashboard',
   imports: [
-   CommonModule, TopbarComponent, BreadcrumbComponent, RouterOutlet
+   CommonModule, TopbarComponent, BreadcrumbComponent, RouterOutlet,ProfileDetails,Sidemenu
 ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
@@ -33,7 +35,4 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit() {}
 
-  //  onProductSelected(productId: number) {
-  //   this.router.navigate(['/product', productId]);
-  // }
 }
